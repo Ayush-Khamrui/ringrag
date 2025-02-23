@@ -66,7 +66,7 @@ AWS_SECRET_ACCESS_KEY=your_secret_key
 ```bash
 python main.py
 ```
-By default, the server will run at **http://127.0.0.1:5000**.
+By default, the server will run at **http://127.0.0.1:5000/api**.
 
 ---
 
@@ -79,7 +79,7 @@ By default, the server will run at **http://127.0.0.1:5000**.
 
 **Request Example (Multipart Form-Data):**
 ```bash
-curl -X POST http://127.0.0.1:5000/upload \
+curl -X POST http://127.0.0.1:5000/api/upload \
   -F "file=@document.pdf"
 ```
 
@@ -98,7 +98,7 @@ curl -X POST http://127.0.0.1:5000/upload \
 
 **Request Example (JSON):**
 ```bash
-curl -X POST http://127.0.0.1:5000/ask \
+curl -X POST http://127.0.0.1:5000/api/ask \
   -H "Content-Type: application/json" \
   -d '{
         "question": "What is the content of the document?",
@@ -130,5 +130,9 @@ curl -X POST http://127.0.0.1:5000/ask \
 5. Create a **Pull Request**
 
 ---
+
+## 👨‍💻 Live URL Test
+https://ringrag.onrender.com/api/upload - > To upload the document
+https://ringrag.onrender.com/api/ask - > To query from the document
 
 ---
