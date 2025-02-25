@@ -3,6 +3,7 @@ import os
 
 # Add the project root directory to the PYTHONPATH
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+port = int(os.environ.get("PORT", 5000))
 
 from app.config import Config
 from app.routes.api_routes import api_bp
@@ -19,4 +20,4 @@ def create_app():
 
 if __name__ == '__main__':
     app = create_app()
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=port)
